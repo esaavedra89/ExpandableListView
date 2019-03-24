@@ -1,0 +1,12 @@
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\bin\Debug\netstandard2.0\ExpandableList.deps.json
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\bin\Debug\netstandard2.0\ExpandableList.dll
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\bin\Debug\netstandard2.0\ExpandableList.pdb
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\obj\Debug\netstandard2.0\ExpandableList.csprojAssemblyReference.cache
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\obj\Debug\netstandard2.0\ExpandableList.csproj.CoreCompileInputs.cache
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\obj\Debug\netstandard2.0\ExpandableList.AssemblyInfoInputs.cache
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\obj\Debug\netstandard2.0\ExpandableList.AssemblyInfo.cs
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\obj\Debug\netstandard2.0\XamlC.stamp
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\obj\Debug\netstandard2.0\ExpandableList.dll
+D:\practicas-eleazar\ExpandableList\ExpandableList\ExpandableList\obj\Debug\netstandard2.0\ExpandableList.pdb
