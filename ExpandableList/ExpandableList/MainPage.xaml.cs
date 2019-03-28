@@ -43,5 +43,10 @@ namespace ExpandableList
             _allGroups[selectedIndex].Expanded = !_allGroups[selectedIndex].Expanded;
             UpdateListContent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ListViewGroupingView());
+        }
     }
 }

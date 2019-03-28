@@ -6,8 +6,10 @@
     <ContentPage.BindingContext>
         <local:FoodGroup/>
     </ContentPage.BindingContext>
-
     <StackLayout>
+        <Button
+            Text="Navegar"
+            Clicked="Button_Clicked"/>
         <ListView
             x:Name="GroupedView"
             GroupDisplayBinding="{Binding Title}"

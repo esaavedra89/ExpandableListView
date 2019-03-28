@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ExpandableList"
+             x:Class="ExpandableList.ListViewGroupingView"
+             Title="Lista">
+    <ContentPage.BindingContext>
+        <local:FoodGroup2/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView
+                ItemsSource="{Binding All}"
+                x:Name="GroupedView"
+                GroupDisplayBinding="{Binding NombreProductor}"
+                RowHeight="75"
+                GroupShortNameBinding="{Binding NumeroMeliponario}"
+                IsGroupingEnabled="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--
+                            Tapped="TapGestureRecognizer_Tapped"
+                            -->
+                            <Grid Margin="0">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding CajaCommand}"/>
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label 
+                                FontSize="Default"
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                Text="{Binding NumeroCaja, StringFormat='Número de caja: {0}'}"
+                                TextColor="Black"
+                                HorizontalTextAlignment="Start"
+                                VerticalOptions="CenterAndExpand">
+
+                                </Label>
+
+                                <Label 
+                                FontSize="Default"
+                                Grid.Column="2"
+                                Grid.Row="0"
+                                HorizontalOptions="Center"
+                                Text="{Binding NombreTipoEspecie, Mode=TwoWay, StringFormat='Especie: {0}'}"
+                                TextColor="Black"
+                                VerticalOptions="Center">
+
+                                </Label>
+                                <Label 
+                                FontSize="Default"
+                                Grid.Column="3"
+                                Grid.Row="0"
+                                HorizontalTextAlignment="End"
+                                Text="{Binding FechaEntregaAlProductorString, StringFormat='Activa desde: {0}'}"
+                                TextColor="Black"
+                                VerticalOptions="Center">
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--Tapped="TapGestureRecognizer_Tapped_1"-->
+                            <Frame
+                                BackgroundColor="Gray"
+                                CornerRadius="15"
+                                HasShadow="True"
+                                Margin="4,2,4,2">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding MeliponariosCommand}"/>
+                                </Frame.GestureRecognizers>
+                                <Grid
+                                    VerticalOptions="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label 
+                                        Grid.Column="0"
+                                        FontAttributes="Bold"
+                                        FontSize="20"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding NombreProductor}" 
+                                        TextColor="White"/>
+                                    <Label 
+                                        Grid.Column="1"
+                                        HorizontalTextAlignment="Start"
+                                        Text="{Binding NumeroMeliponario, StringFormat='Id meliponario: {0}'}" 
+                                        TextColor="White"
+                                        FontSize="18"/>
+                                    <Label 
+                                        Grid.Column="2" 
+                                        HorizontalTextAlignment="End"
+                                        Text="{Binding FechaCreacionString, StringFormat='Fecha: {0}'}" 
+                                        TextColor="White"
+                                        FontSize="18"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.GroupHeaderTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
